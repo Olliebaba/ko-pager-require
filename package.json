@@ -1,0 +1,16 @@
+{
+  "name": "ko-pager-require",
+  "version": "1.0.0",
+  "description": "ko pager require",
+  "main": "index.html",
+  "scripts": {},
+  "keywords": [
+    "ko", "pager", "require"
+  ],
+  "author": "nemo",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "gulp": "^3.9.1"
+  }
+}

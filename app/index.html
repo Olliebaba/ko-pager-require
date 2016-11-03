@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ko and require</title>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="#!/">Home</a></li>
+                <li><a href="#!/info">Info</a></li>
+            </ul>
+        </header>
+
+        <div class="wrapper" data-bind="page: {
+        id: 'home',
+        role: 'start',
+        sourceOnShow: 'components/home/home.html',
+        title: 'ko and require - home'
+    }"></div>
+    <div data-bind="page: {
+        id: 'info',
+        sourceOnShow: 'components/info/info.html',
+        title: 'ko and require - info'
+    }"></div>
+
+        <script data-main="main" src="js/require.js"></script>
+    </body>
+</html>
