@@ -8,7 +8,7 @@ define(['knockout', 'text', 'text!./info.html'], function(ko, text, template) {
       this.products = [
         new Product('Garlic bread'),
         new Product('Pain au chocolat'),
-        new Product('Seagull spaghetti', true) // This one was already 'liked'
+        new Product('Seagull spaghetti', true)
       ];
     }
 

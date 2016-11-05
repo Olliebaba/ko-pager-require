@@ -1,0 +1,1 @@
+define(["knockout"],function(e){return function(){e.components.register("like-or-dislike",{viewModel:{require:"../components/info/info"},template:{require:"text!../components/info/info.html"}})}});
