@@ -1,25 +1,28 @@
 requirejs.config({
-    "baseUrl": "js",
+    "baseUrl": ".",
     shim:{
         bootstrap:['jquery']
     },
     paths:{
-        jquery:'jquery',
-        knockout:'knockout',
-        pager:'pager',
-        bootstrap:'bootstrap'
+        jquery:'js/jquery',
+        knockout:'js/knockout',
+        pager:'js/pager',
+        bootstrap:'js/bootstrap',
+        text: 'js/tools/text'
     }
 });
 
-
-
-
 requirejs(['jquery', 'knockout', 'pager', 'bootstrap'], function ($, ko, pager) {
+    ko.components.register("like-or-dislike", { require: 'components/info/info' });
 
-    function MyApp() {
+    ko.bindingHandlers.stopBinding = {
+        init: function() {
+            return {controlsDescendantBindings: true};
+        }
+    };
+    ko.virtualElements.allowedBindings.stopBinding = true;
 
-    }
-
+    function MyApp() {}
 
     myApp = new MyApp();
     pager.Href.hash = "#!/";

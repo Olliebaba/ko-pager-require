@@ -4,9 +4,7 @@
   "description": "ko pager require",
   "main": "index.html",
   "scripts": {},
-  "keywords": [
-    "ko", "pager", "require"
-  ],
+  "keywords": ["ko", "pager", "require"],
   "author": "nemo",
   "license": "ISC",
   "devDependencies": {
