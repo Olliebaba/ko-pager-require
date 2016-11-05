@@ -1,6 +1,6 @@
 {
     "appDir": "../../",
-    "baseUrl": "js",
+    "baseUrl": ".",
     "dir": "../../../dist",
     //Comment out the optimize line if you want
     //the code minified by UglifyJS
@@ -13,7 +13,7 @@
         //Optimize the application files. jQuery and the plugins will be included
         //automatically, as they are dependencies of app.js.
         {
-            "name": "../main"
+            "name": "main"
         }
     ]
 }
