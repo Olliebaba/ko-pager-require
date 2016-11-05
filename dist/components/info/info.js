@@ -1,0 +1,1 @@
+define(["knockout","text","text!./info.html"],function(t,e,n){function i(e,n){this.name=e,this.userRating=t.observable(n||!1)}function a(){this.products=[new i("Garlic bread"),new i("Pain au chocolat"),new i("Seagull spaghetti",!0)]}return{viewModel:a,template:n}});
