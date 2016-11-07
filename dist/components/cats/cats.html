@@ -1,4 +1,4 @@
-<ul data-bind="foreach: cats">
+<ul data-bind="foreach: cats" class="list-unstyled">
   <li>
       <input data-bind="attr: {id: $data, value: $data}, click: $parent.selectCat, checked: $parent.showSelected" name="cats" type="radio">
       <label data-bind="attr: {for: $data}, text: $data"></label>

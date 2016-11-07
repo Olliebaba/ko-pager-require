@@ -3,39 +3,44 @@
 
 <head>
     <title>ko and require</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
-    <header>
-        <ul>
-            <li><a href="#!/">Home</a></li>
-            <li><a href="#!/info">Info</a></li>
-            <li><a href="#!/cats">Cats</a></li>
+    <header class="<clearfix></clearfix>">
+      <nav class="navbar navbar-default">
+        <ul class="nav navbar-nav" data-bind="foreach: pages">
+            <li data-bind="css: {active: $parent.pageIsActive(pagePath)}">
+              <a data-bind="text: pageName, attr: {href: pagePath}"></a>
+            </li>
         </ul>
+      </nav>
     </header>
+    <main class="container-fluid">
 
-    <div class="wrapper" data-bind="
-        page: {
-            id: 'home',
-            role: 'start',
-            sourceOnShow: 'components/home/home.html',
-            title: 'ko and require - home'
-    }"></div>
+        <div class="wrapper" data-bind="
+            page: {
+                id: 'home',
+                role: 'start',
+                sourceOnShow: 'pages/home',
+                title: 'ko and require - home'
+        }"></div>
 
-    <div data-bind="
-        page: {
-            id: 'info',
-            sourceOnShow: 'components/info/index.html',
-            title: 'ko and require - info'
-    }"></div>
+        <div data-bind="
+            page: {
+                id: 'info',
+                sourceOnShow: 'pages/info',
+                title: 'ko and require - info'
+        }"></div>
 
-    <div data-bind="
-        page: {
-            id: 'cats',
-            sourceOnShow: 'components/cats/index.html',
-            title: 'ko and require - cats'
-    }"></div>
-
+        <div data-bind="
+            page: {
+                id: 'cats',
+                sourceOnShow: 'pages/cats',
+                title: 'ko and require - cats'
+        }"></div>
+    </main>
+    
 <script data-main="main" src="js/require.js"></script>
 </body>
 

@@ -1,1 +1,1 @@
-define(["knockout","text","text!./cat.html"],function(e,t,i){return{template:i,viewModel:function(e){self.catName=e.catName,self.picture=e.picture,self.likes=e.likes,self.dislikes=e.dislikes}}});
+define(["knockout","text","text!./cat.html"],function(e,t,n){return{template:n,viewModel:function(e){self.catName=e.catName,self.picture=e.picture,self.likes=e.likes,self.dislikes=e.dislikes,self.combineString=function(e){return e.reduce(function(e,t,n,i){return e+=(n+1===i.length&&i.length>1?" and ":"")+t+(n+2<i.length&&i.length>2?", ":"")},"")}}}});
