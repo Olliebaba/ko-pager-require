@@ -3,16 +3,15 @@
   <aside>
     <img data-bind="attr:{src: picture}">
   </aside>
-  <p>
-    Likes:
-    <span data-bind="foreach: likes">
-      <span data-bind="text: $data"></span>
-    </span>
-  </p>
-  <p>
-    Disikes:
-    <span data-bind="foreach: dislikes">
-      <span data-bind="text: $data"></span>
-    </span>
-  </p>
+  <div data-bind="foreach: [likes, dislikes]">
+    <!-- ko if: $data.length -->
+    <h3 data-bind="text: $index() === 0 ? 'Likes' : 'Dislikes'"></h3>
+    <p data-bind="foreach: $data">
+      <!-- ko if: $index() + 1 === $parent.length && $parent.length > 1 -->
+        and
+      <!-- /ko -->
+      <span data-bind="text: $data"></span><!-- ko if: $index() + 2 < $parent.length && $parent.length > 2 -->,<!-- /ko -->
+    </p>
+    <!-- /ko -->
+  </div>
 </article>

@@ -21,18 +21,18 @@ define(['knockout', 'text', 'text!./cats.html'], function(ko, text, template) {
     cats = [{
           catName: 'marvin',
           picture: 'https://pixabay.com/static/uploads/photo/2014/03/29/09/17/cat-300572_960_720.jpg',
-          likes: ['food'],
-          dislikes: ['not food']
+          likes: ['food', 'blankets', 'baskets'],
+          dislikes: []
         },{
           catName: 'ollie',
           picture: 'https://img1.wsimg.com/fos/sales/cwh/8/images/cats-with-hats-shop-06.jpg',
-          likes: ['food'],
-          dislikes: ['not food']
+          likes: ['spanks', 'face rubs'],
+          dislikes: ['being wet', 'gentle pets', 'bad music']
         },{
           catName: 'petunia',
           picture: "http://i.imgur.com/tpYRZkZ.jpg",
-          likes: ['food'],
-          dislikes: ['not food']
+          likes: ['screech'],
+          dislikes: ['cuddles', 'dingle berries']
       }
     ]
 
