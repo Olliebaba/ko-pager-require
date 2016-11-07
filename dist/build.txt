@@ -1,8 +1,9 @@
 
 main.js
 ----------------
-js/jquery.js
 js/knockout.js
+components/components.js
+js/jquery.js
 js/pager.js
 js/bootstrap.js
 main.js

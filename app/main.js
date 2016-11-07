@@ -12,8 +12,10 @@ requirejs.config({
     }
 });
 
+// register custom components
+requirejs(['components/components']);
+
 requirejs(['jquery', 'knockout', 'pager', 'bootstrap'], function ($, ko, pager) {
-    ko.components.register("like-or-dislike", { require: 'components/info/info' });
 
     ko.bindingHandlers.stopBinding = {
         init: function() {

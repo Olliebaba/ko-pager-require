@@ -1,8 +1,5 @@
 define(['knockout'], function(ko) {
-    return function() {
-        ko.components.register('like-or-dislike', {
-            viewModel: { require: '../components/info/info' },
-            template: { require: 'text!../components/info/info.html' }
-        });
-    }
+  ko.components.register("like-or-dislike", { require: 'components/info/info' });
+  ko.components.register("cat", { require: 'components/cats/cat/cat' });
+  ko.components.register("cats", { require: 'components/cats/cats' });
 });

@@ -10,6 +10,7 @@
         <ul>
             <li><a href="#!/">Home</a></li>
             <li><a href="#!/info">Info</a></li>
+            <li><a href="#!/cats">Cats</a></li>
         </ul>
     </header>
 
@@ -26,6 +27,13 @@
             id: 'info',
             sourceOnShow: 'components/info/index.html',
             title: 'ko and require - info'
+    }"></div>
+
+    <div data-bind="
+        page: {
+            id: 'cats',
+            sourceOnShow: 'components/cats/index.html',
+            title: 'ko and require - cats'
     }"></div>
 
 <script data-main="main" src="js/require.js"></script>

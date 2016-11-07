@@ -1,0 +1,1 @@
+define(["knockout","text","text!./cat.html"],function(e,t,i){return{template:i,viewModel:function(e){self.catName=e.catName,self.picture=e.picture,self.likes=e.likes,self.dislikes=e.dislikes}}});

@@ -1,0 +1,18 @@
+<article>
+  <h1 data-bind="text: catName"></h1>
+  <aside>
+    <img data-bind="attr:{src: picture}">
+  </aside>
+  <p>
+    Likes:
+    <span data-bind="foreach: likes">
+      <span data-bind="text: $data"></span>
+    </span>
+  </p>
+  <p>
+    Disikes:
+    <span data-bind="foreach: dislikes">
+      <span data-bind="text: $data"></span>
+    </span>
+  </p>
+</article>
