@@ -1,0 +1,12 @@
+<header class="clearfix">
+  <nav class="navbar navbar-default">
+    <ul class="nav navbar-nav" data-bind="foreach: pages">
+        <li data-bind="css: {active: $parent.pageIsActive(pagePath)}">
+          <a data-bind="text: pageName, attr: {href: pagePath}"></a>
+        </li>
+    </ul>
+  </nav>
+</header>
+<main data-bind="foreach: pages" class="container-fluid">
+    <div data-bind="page: pageConfig"></div>
+</main>

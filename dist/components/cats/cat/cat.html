@@ -1,12 +1,14 @@
-<article>
-  <h1 data-bind="text: catName"></h1>
-  <aside>
-    <img data-bind="attr:{src: picture}">
+<article class="row">
+  <figure class="col-md-3">
+    <img data-bind="attr:{src: picture}" class="img-responsive">
+  </figure>
+  <aside class="col-md-9">
+    <h1 data-bind="text: catName"></h1>
+    <div data-bind="foreach: [likes, dislikes]">
+      <!-- ko if: $data.length -->
+      <h3 data-bind="text: ($index() === 0 ? 'Likes' : 'Dislikes') + ':'"></h3>
+      <p data-bind="text: combineString($data)"></p>
+      <!-- /ko -->
+    </div>
   </aside>
-  <div data-bind="foreach: [likes, dislikes]">
-    <!-- ko if: $data.length -->
-    <h3 data-bind="text: ($index() === 0 ? 'Likes' : 'Dislikes') + ':'"></h3>
-    <p data-bind="text: combineString($data)"></p>
-    <!-- /ko -->
-  </div>
 </article>
